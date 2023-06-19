@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <h3>When you click on the following button, it will disappear.</h3>
+      <button id="bId">Click Me !</button>
+    </div>
+    <hr />
+    <div>
+      <h3>When you Double click on the following button, it will disappear.</h3>
+      <button id="dbId">Double Click!</button>
+    </div>
+    <hr />
+    <div>
+      <h3>
+        When you hover on the following paragraph, it will change the color.
+      </h3>
+      <p id="pid1">Hover Me !</p>
+    </div>
+    <hr />
+    <div>
+      <h3>
+        When your mouse enters following paragraph it will change it's color to
+        cyan and when mouse leaves, color will be changed to yellow .
+      </h3>
+      <p id="pid2">Mouse Entered or Leaved</p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('#bId').click(function () {
+          $(this).hide();
+        });
+
+        $('#dbId').dblclick(function () {
+          $(this).hide();
+        });
+
+        $('#pid1').hover(function () {
+          $(this).css('background-color', 'pink');
+        });
+
+        $('#pid2').mouseenter(function () {
+          $(this).css('background-color', 'cyan');
+        });
+
+        $('#pid2').mouseleave(function () {
+          $(this).css('background-color', 'yellow');
+        });
+      });
+    </script>
+  </body>
+</html>
